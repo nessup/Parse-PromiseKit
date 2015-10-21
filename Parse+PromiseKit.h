@@ -305,62 +305,62 @@
 @end
 
 
-@interface PFTwitterUtils (PromiseKit)
-
-/**
- Logs in a user using Twitter. This method delegates to Twitter to authenticate the user, and then
- automatically logs in (or creates, in the case where it is a new user) a PFUser. Thens the
- successfully logged in `PFUser *`.
- @return A Promise that thens `PFUser *user`.
- */
-+ (PMKPromise *)promiseLogIn;
-/**
- Logs in a user using Twitter. Allows you to handle user login to Twitter, then provide
- authentication data to log in (or create, in the case where it is a new user) the PFUser. Thens the
- successfully logged in `PFUser *`.
- @param twitterId The id of the Twitter user being linked.
- @param screenName The screen name of the Twitter user being linked.
- @param authToken The auth token for the user's session.
- @param authTokenSecret The auth token secret for the user's session.
- @return A Promise that thens `PFUser *user`.
- */
-+ (PMKPromise *)promiseLogInWithTwitterId:(NSString *)twitterId
-                               screenName:(NSString *)screenName
-                                authToken:(NSString *)authToken
-                          authTokenSecret:(NSString *)authTokenSecret;
-
-/**
- Links Twitter to an existing PFUser. This method delegates to Twitter to authenticate the user, and
- then automatically links the account to the PFUser. Thens a succeeded `NSNumber *` boolean (always
- true).
- @param user User to link to Twitter.
- @return A Promise that thens `NSNumber *succeededBool` (always true)`.
- */
-+ (PMKPromise *)promiseLinkUser:(PFUser *)user;
-/**
- Links Twitter to an existing PFUser. Allows you to handle user login to Twitter, then provide
- authentication data to link the account to the PFUser. Thens a succeeded `NSNumber *` boolean
- (always true).
- @param user User to link to Twitter.
- @param twitterId The id of the Twitter user being linked.
- @param screenName The screen name of the Twitter user being linked.
- @param authToken The auth token for the user's session.
- @param authTokenSecret The auth token secret for the user's session.
- @return A Promise that thens `NSNumber *succeededBool` (always true)`.
- */
-+ (PMKPromise *)promiseLinkUser:(PFUser *)user
-                      twitterId:(NSString *)twitterId
-                     screenName:(NSString *)screenName
-                      authToken:(NSString *)authToken
-                authTokenSecret:(NSString *)authTokenSecret;
-
-/**
- Unlinks the PFUser from a Twitter account. Thens a succeeded `NSNumber *` boolean (always true).
- @param user User to unlink from Twitter.
- @return A Promise that thens `NSNumber *succeededBool` (always true)`.
- */
-+ (PMKPromise *)promiseUnlinkUser:(PFUser *)user;
-
-@end
+//@interface PFTwitterUtils (PromiseKit)
+//
+///**
+// Logs in a user using Twitter. This method delegates to Twitter to authenticate the user, and then
+// automatically logs in (or creates, in the case where it is a new user) a PFUser. Thens the
+// successfully logged in `PFUser *`.
+// @return A Promise that thens `PFUser *user`.
+// */
+//+ (PMKPromise *)promiseLogIn;
+///**
+// Logs in a user using Twitter. Allows you to handle user login to Twitter, then provide
+// authentication data to log in (or create, in the case where it is a new user) the PFUser. Thens the
+// successfully logged in `PFUser *`.
+// @param twitterId The id of the Twitter user being linked.
+// @param screenName The screen name of the Twitter user being linked.
+// @param authToken The auth token for the user's session.
+// @param authTokenSecret The auth token secret for the user's session.
+// @return A Promise that thens `PFUser *user`.
+// */
+//+ (PMKPromise *)promiseLogInWithTwitterId:(NSString *)twitterId
+//                               screenName:(NSString *)screenName
+//                                authToken:(NSString *)authToken
+//                          authTokenSecret:(NSString *)authTokenSecret;
+//
+///**
+// Links Twitter to an existing PFUser. This method delegates to Twitter to authenticate the user, and
+// then automatically links the account to the PFUser. Thens a succeeded `NSNumber *` boolean (always
+// true).
+// @param user User to link to Twitter.
+// @return A Promise that thens `NSNumber *succeededBool` (always true)`.
+// */
+//+ (PMKPromise *)promiseLinkUser:(PFUser *)user;
+///**
+// Links Twitter to an existing PFUser. Allows you to handle user login to Twitter, then provide
+// authentication data to link the account to the PFUser. Thens a succeeded `NSNumber *` boolean
+// (always true).
+// @param user User to link to Twitter.
+// @param twitterId The id of the Twitter user being linked.
+// @param screenName The screen name of the Twitter user being linked.
+// @param authToken The auth token for the user's session.
+// @param authTokenSecret The auth token secret for the user's session.
+// @return A Promise that thens `NSNumber *succeededBool` (always true)`.
+// */
+//+ (PMKPromise *)promiseLinkUser:(PFUser *)user
+//                      twitterId:(NSString *)twitterId
+//                     screenName:(NSString *)screenName
+//                      authToken:(NSString *)authToken
+//                authTokenSecret:(NSString *)authTokenSecret;
+//
+///**
+// Unlinks the PFUser from a Twitter account. Thens a succeeded `NSNumber *` boolean (always true).
+// @param user User to unlink from Twitter.
+// @return A Promise that thens `NSNumber *succeededBool` (always true)`.
+// */
+//+ (PMKPromise *)promiseUnlinkUser:(PFUser *)user;
+//
+//@end
 
 #endif

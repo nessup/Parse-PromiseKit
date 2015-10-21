@@ -57,4 +57,16 @@ Pod::Spec.new do |s|
 
     fs.ios.xcconfig = { 'FRAMEWORK_SEARCH_PATHS' => '"$(PODS_ROOT)/ParseFacebookUtils"' }
   end
+
+  s.subspec 'TwitterUtils' do |fs|
+    fs.platform = :ios
+
+    fs.source_files        = 'ParseFacebookUtils+PromiseKit.{h,m}'
+    fs.public_header_files = 'ParseFacebookUtils+PromiseKit.h'
+
+    fs.dependency 'Parse+PromiseKit/Base'
+    fs.dependency 'ParseFacebookUtils', '~> 1.3'
+
+    fs.ios.xcconfig = { 'FRAMEWORK_SEARCH_PATHS' => '"$(PODS_ROOT)/ParseFacebookUtils"' }
+  end
 end

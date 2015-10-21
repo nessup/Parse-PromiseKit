@@ -343,59 +343,59 @@
 @end
 
 
-@implementation PFTwitterUtils (PromiseKit)
-
-+ (PMKPromise *)promiseLogIn
-{
-    return [PMKPromise new:^(PMKPromiseFulfiller fulfiller, PMKPromiseRejecter rejecter) {
-        [self logInWithBlock:PMKPFUserResultBlock];
-    }];
-}
-
-+ (PMKPromise *)promiseLogInWithTwitterId:(NSString *)twitterId
-                            screenName:(NSString *)screenName
-                             authToken:(NSString *)authToken
-                       authTokenSecret:(NSString *)authTokenSecret
-{
-    return [PMKPromise new:^(PMKPromiseFulfiller fulfiller, PMKPromiseRejecter rejecter) {
-        [self logInWithTwitterId:twitterId
-                      screenName:screenName
-                       authToken:authToken
-                 authTokenSecret:authTokenSecret
-                           block:PMKPFUserResultBlock];
-    }];
-}
-
-+ (PMKPromise *)promiseLinkUser:(PFUser *)user
-{
-    return [PMKPromise new:^(PMKPromiseFulfiller fulfiller, PMKPromiseRejecter rejecter) {
-        [self linkUser:user block:PMKPFBooleanResultBlock];
-    }];
-}
-
-+ (PMKPromise *)promiseLinkUser:(PFUser *)user
-                   twitterId:(NSString *)twitterId
-                  screenName:(NSString *)screenName
-                   authToken:(NSString *)authToken
-             authTokenSecret:(NSString *)authTokenSecret
-{
-    return [PMKPromise new:^(PMKPromiseFulfiller fulfiller, PMKPromiseRejecter rejecter) {
-        [self linkUser:user
-             twitterId:twitterId
-            screenName:screenName
-             authToken:authToken
-       authTokenSecret:authTokenSecret
-                 block:PMKPFBooleanResultBlock];
-    }];
-}
-
-+ (PMKPromise *)promiseUnlinkUser:(PFUser *)user
-{
-    return [PMKPromise new:^(PMKPromiseFulfiller fulfiller, PMKPromiseRejecter rejecter) {
-        [self unlinkUserInBackground:user block:PMKPFBooleanResultBlock];
-    }];
-}
-
-@end
+//@implementation PFTwitterUtils (PromiseKit)
+//
+//+ (PMKPromise *)promiseLogIn
+//{
+//    return [PMKPromise new:^(PMKPromiseFulfiller fulfiller, PMKPromiseRejecter rejecter) {
+//        [self logInWithBlock:PMKPFUserResultBlock];
+//    }];
+//}
+//
+//+ (PMKPromise *)promiseLogInWithTwitterId:(NSString *)twitterId
+//                            screenName:(NSString *)screenName
+//                             authToken:(NSString *)authToken
+//                       authTokenSecret:(NSString *)authTokenSecret
+//{
+//    return [PMKPromise new:^(PMKPromiseFulfiller fulfiller, PMKPromiseRejecter rejecter) {
+//        [self logInWithTwitterId:twitterId
+//                      screenName:screenName
+//                       authToken:authToken
+//                 authTokenSecret:authTokenSecret
+//                           block:PMKPFUserResultBlock];
+//    }];
+//}
+//
+//+ (PMKPromise *)promiseLinkUser:(PFUser *)user
+//{
+//    return [PMKPromise new:^(PMKPromiseFulfiller fulfiller, PMKPromiseRejecter rejecter) {
+//        [self linkUser:user block:PMKPFBooleanResultBlock];
+//    }];
+//}
+//
+//+ (PMKPromise *)promiseLinkUser:(PFUser *)user
+//                   twitterId:(NSString *)twitterId
+//                  screenName:(NSString *)screenName
+//                   authToken:(NSString *)authToken
+//             authTokenSecret:(NSString *)authTokenSecret
+//{
+//    return [PMKPromise new:^(PMKPromiseFulfiller fulfiller, PMKPromiseRejecter rejecter) {
+//        [self linkUser:user
+//             twitterId:twitterId
+//            screenName:screenName
+//             authToken:authToken
+//       authTokenSecret:authTokenSecret
+//                 block:PMKPFBooleanResultBlock];
+//    }];
+//}
+//
+//+ (PMKPromise *)promiseUnlinkUser:(PFUser *)user
+//{
+//    return [PMKPromise new:^(PMKPromiseFulfiller fulfiller, PMKPromiseRejecter rejecter) {
+//        [self unlinkUserInBackground:user block:PMKPFBooleanResultBlock];
+//    }];
+//}
+//
+//@end
 
 #endif
